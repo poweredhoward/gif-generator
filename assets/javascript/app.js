@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var baseURL = "http://api.giphy.com/v1/gifs/search?api_key=hGFuesSai3UP90QLzwIsd6liTapHXtQy&limit=10&q=";
+    var baseURL = "https://api.giphy.com/v1/gifs/search?api_key=hGFuesSai3UP90QLzwIsd6liTapHXtQy&limit=10&q=";
     
     //Buttons to make
     var categories = ["dog", "cat", "horse", "parrot", "hamster", "pig", 
