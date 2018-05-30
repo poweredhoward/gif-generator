@@ -5,6 +5,7 @@ $(document).ready(function() {
     var categories = ["dog", "cat", "horse", "parrot", "hamster", "pig", 
     "goat", "cow", "bunny", "lizard", "fish", "chicken"];
 
+
     categories.forEach( function (category){
         var button = $("<button>").text(category);
         button.addClass("animal-button");
@@ -20,14 +21,18 @@ $(document).ready(function() {
         }).then(function (response){
 
             response.data.forEach( function (result){
+                var div = $("<div>").append( 
+                    $("<p>").text("Rating: " + result.rating.toUpperCase() ) 
+                );
 
+                div.addClass("gif-div");
                 var gif = $("<img src="+result.images.fixed_height.url+">");
                 gif.addClass("gif");
                 gif.attr("state", "animate");
                 gif.attr("still", result.images.fixed_height_still.url);
                 gif.attr("animate", result.images.fixed_height.url);
 
-                $("#gifs").append(gif);
+                $("#gifs").append( div.append(gif) );
             });
             
         });
@@ -52,7 +57,9 @@ $(document).ready(function() {
     });
 
     $("#submit").on("click", function(){
-        $("#buttons").append( $("<button>").text( $("#animal-to-add").val() ) )
+        var button = $("<button>").text( $("#animal-to-add").val() );
+        button.addClass("animal-button")
+        $("#buttons").append( button )
     });
 
 });

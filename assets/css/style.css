@@ -1,0 +1,30 @@
+.gif-div {
+    display: inline-block;
+    margin: 10px;
+}
+
+#add-animal {
+    float: right;
+    display: inline-block;
+    width: 30%;
+}
+
+#gifs {
+    width: 70%;
+    float: left;
+}
+
+button {
+    margin: 6px;
+    border-radius: 6px;
+    background-color: teal;
+    color: white;
+}
+
+body{
+    background-color: rgb(62, 46, 88);
+}
+
+p {
+    color: white;
+}
